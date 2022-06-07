@@ -13,19 +13,16 @@ console.log("ЗАДАНИЕ 2");
 принимает слово, проверяет является ли слово палиндромом 
 (читается одинаково в обоих направлениях) и выводит true или false*/
 
-function isPalindrome(w, len){
+ffunction isPalindrome(w, len){
     let differentLetter=0;
     for (let i=0; i<=len/2; i++) {
         //console.log('A', w[i], w[len-(i+1)]);
         if (w[i]!=w[len-(i+1)]) {
-            differentLetter+=1;
+            console.log("false");
+            return false;
         } 
     }
-    if (differentLetter==0){
-        console.log(true);
-    } else {
-        console.log(false);
-    }
+    console.log("true");
 }
 let word='довод', lengthWord=word.length;
 isPalindrome(word, lengthWord);
@@ -79,8 +76,8 @@ let student = {
     last_name: "Иванов",
     first_name: "Иван"
     };
-console.log("Список свойств: group, last_name, first_name");
-console.log("Студент " + student.last_name + " " + student.first_name + " учится в " + student.group + " группе");
+console.log("Список свойств:", Object.keys(student));
+console.log(`Студент ${student.last_name} ${student.first_name} учится в ${student.group} группе`);
 
 
 console.log("ЗАДАНИЕ 5");
